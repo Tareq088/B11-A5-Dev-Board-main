@@ -9,39 +9,71 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
-                         <!-- tailwindcss +daisy Ui -->
-    <link href="https://cdn.jsdelivr.net/npm/daisyui@5.0.0-beta.8/daisyui.css" rel="stylesheet" type="text/css" />
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
+                         <!-- DAISYUI cdn + TAILWIND CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .font-poppins{
             font-family: "Poppins", sans-serif;
-          }   
-      </style>
+        }   
+    </style>
+    <script>
+    tailwind.config = {
+        theme: {
+        extend: {
+            colors: {
+            clifford: '#da373d',
+            'board-primary':'#f4f7ff',
+            'btn-primary' : '#3752FD',
+            }
+        }
+        }
+    }
+    </script>
 </head>
-<body class="font-poppins bg-[#f4f7ff]">
+<body class="font-poppins bg-board-primary">
     <!-- header section -->
-    <header class="md:container mx-auto px-5">
-        <div class="navbar bg-base-100 shadow-sm">
-            <div class="navbar-start">
-              <div class="dropdown">
-              <a class="btn btn-ghost text-xl">daisyUI</a>
+    <header class="pt-2">
+        <nav class="md:container mx-auto px-5 bg-white rounded-xl">
+            <div class="flex flex-row justify-between items-center py-2">
+                <div class="flex flex-row items-center w-2/3 gap-2 cursor-pointer">
+                    <img src="assets/logo.png" alt="logo picture">
+                    <h1 class="text-3xl"> <span class="font-light">Dev</span> <span class="font-bold">Board</span> </h1>
+                </div>
+                <div class="">
+                    <button class="text-white text-base font-medium px-5 py-2 rounded-md bg-purple-900">Back to Desk</button> 
+                </div>
             </div>
-            <div class="navbar-end">
-              <a class="btn">Back to Desk</a>
-            </div>
-          </div>
+        </nav>
     </header>
-    <section class="md:container mx-auto px-5">
-        <div class="border-gray-600">
-            <h2>Question-1: What are the different ways to select an element in the DOM?</h2>
-            <hr>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus provident perferendis quod! Quisquam nesciunt deleniti, rerum doloremque debitis nemo ipsam?</p>
+    <h1 class="text-2xl font-bold text-center my-3">Blogs</h1>
+    <section class="md:container mx-auto px-5 space-y-3">
+        <div class="bg-white rounded-lg">
+            <h2 class="text-lg font-bold p-3">Question-1: What are the different ways to select an element in the DOM?</h2>
+            <hr style="border: 1px dashed oklch(0.928 0.006 264.531);"/>
+            <p class="text-lg p-3">we can select an element by it's Classname, TagName, IdName, querySelector, QuerySelectorAll.</p>
         </div>
-        <div class="border-gray-600">
-            <h2>Question-1: What are the different ways to select an element in the DOM?</h2>
-            <hr>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Natus provident perferendis quod! Quisquam nesciunt deleniti, rerum doloremque debitis nemo ipsam?</p>
+        <div class="bg-white rounded-lg">
+            <h2 class="text-lg font-bold p-3">Question-2: What is the difference between innerHTML, innerText and textconten?</h2>
+            <hr style="border: 1px dashed oklch(0.928 0.006 264.531);"/>
+            <p class="text-lg p-3">innerHTML Contains text with its Tag name. but innerText contains only text, no Tag Name and can't read the hidden data. But text content contains only text, no Tag Name and it can read the hidden data also.</p>
+        </div>
+        <div class="bg-white rounded-lg">
+            <h2 class="text-lg font-bold p-3">Question-3: What is event delegation in the DOM?</h2>
+            <hr style="border: 1px dashed oklch(0.928 0.006 264.531);"/>
+            <p class="text-lg p-3">Event delegation means that if i put an event (let click) in the parent node, this event also works for the chile Nodes.</p>
+        </div>
+        <div class="bg-white rounded-lg">
+            <h2 class="text-lg font-bold p-3">Question-1: What is event bubbling in the DOM?</h2>
+            <hr style="border: 1px dashed oklch(0.928 0.006 264.531);"/>
+            <p class="text-lg p-3">Event Bubbing is supposed to that an where an event occurs this mechanism goes to its parent elements.</p>
+        </div>
+        <div class="bg-white rounded-lg">
+            <h2 class="text-lg font-bold p-3">Question-5: How do you create, add, and remove elements using JavaScript?</h2>
+            <hr style="border: 1px dashed oklch(0.928 0.006 264.531);"/>
+            <p class="text-lg p-3">To create: document.createElement('elementNode') <br>
+             To add: parentNode.appenChild(childNode) <br>
+            To remove: parentNode.removeChild(childNode) </p>
         </div>
 
 
