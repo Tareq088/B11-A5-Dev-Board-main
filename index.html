@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dev Board Main</title>
+                         <!-- google font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+                         
+    <!-- DAISYUI cdn + TAILWIND CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.23/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+                            <!-- tailwind css -->
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+
+    <style>
+        .font-poppins{
+            font-family: "Poppins", sans-serif;
+        }   
+    </style>
+    <script>
+    tailwind.config = {
+        theme: {
+        extend: {
+            colors: {
+            clifford: '#da373d',
+            'board-primary':'#f4f7ff',
+            'btn-primary' : '#3752FD',
+            }
+        }
+        }
+    }
+    </script>
+</head>
+<body class="font-poppins bg-board-primary">
+    <!-- header section -->
+    <header class="pt-2">
+        <nav class="md:container mx-auto px-5 bg-white rounded-xl">
+            <div class="flex flex-row justify-between items-center py-2">
+                <div class="flex flex-row items-center w-2/3 gap-2 cursor-pointer">
+                    <img src="assets/logo.png" alt="logo picture">
+                    <h1 class="text-3xl"> <span class="font-light">Dev</span> <span class="font-bold">Board</span> </h1>
+                </div>
+                <div class="flex flex-row justify-end gap-10  w-1/3">
+                    <div class="flex flex-row items-center justify-between gap-3 px-2 py-2 rounded-3xl  bg-board-primary">
+                        <img class="pl-3 h-6 w-9" src="assets/checkbox.png" alt="checkbox button clicked">
+                        <p id="checkbox-button-1" class="text-3xl font-bold">23</p>
+                    </div>
+                    <div class="h-11 w-11 rounded-full relative bg-board-primary cursor-pointer">
+                        <img class="h-7 w-7 absolute left-2 top-2" src="assets/theme-btn.png" alt="Theme picture">
+                    </div>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <section class="md:container mx-auto mt-2 pb-4">
+        <div class="grid grid-cols-12 gap-5">
+            <div class="col-span-10 bg-white rounded-2xl">
+                <div class="">
+                    <div class="grid grid-cols-4 gap-3 rounded-lg my-2 px-5">
+                        <div class="flex flex-row bg-board-primary justify-center items-center gap-3 rounded-lg py-8">
+                            <div class="h-12 w-12 relative rounded-full bg-white">
+                                <img class="h-6 w-6 absolute top-3 left-3" src="assets/checkbox.png" alt="">
+                            </div>
+                            <div>
+                                <p class="text-base">Task Assigned</p>
+                                <p id="checkbox-button-2" class="text-3xl font-bold">05</p>
+                            </div>
+                        </div>
+                        <div class="col-span-2 flex flex-row justify-center gap-4 items-center bg-board-primary rounded-lg">
+                            <div class="">
+                                <img src="assets/board.png" alt="">
+                            </div>
+                            <div>
+                                <p class="text-2xl font-medium">Discover Something</p>
+                                <p class="text-2xl font-medium">New Today!</p>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-row bg-board-primary justify-center items-center gap-3 rounded-lg mr-2">
+                            <div class="h-12 w-12 relative rounded-full bg-white">
+                                <img class="h-6 w-6 absolute top-3 left-3" src="assets/calender.png" alt="">
+                            </div>
+                            <div>
+                                <p class="text-base">Wed</p>
+                                <p id="checkbox-button-2" class="text-3xl font-bold">Jul 28 2025</p>
+                            </div>
+                        </div>
+                    </div>
+                    <hr style="border: 1px dashed oklch(0.928 0.006 264.531);" class="my-3" />
+                    <div class="grid grid-cols-3 grid-rows-2 gap-8 px-5">
+                        <div class="border bg-board-primary rounded-lg p-4 space-y-3">
+                            <button class="text-lg bg-white px-4 py-1 rounded-md">ShopEase</button>
+                            <p class="text-2xl font-medium">Fix Mobile Button Issue </p>
+                            <div class="bg-white flex items-center">
+                                <p class="text-lg overflow-ellipsis whitespace-nowrap overflow-hidden h-20 py-3 px-3">Debug using Chrome <br> DevTools, check for overlapping elements, and ensure onClick works properly and ensure onClick works properly</p>
+                            </div>
+                            <hr style="border: 1px dashed oklch(0.928 0.006 264.531);" class="my-3" />
+                            <div class="flex flex-row justify-between">
+                                <div>
+                                    <p class="text-sm text-[#00303C]">Deadline</p>
+                                    <p class="text-base font-medium">21 March 2025</p>
+                                </div>
+                                <div>
+                                    <button class="text-white text-base font-medium px-5 py-2 rounded-md bg-btn-primary">Completed</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border bg-board-primary rounded-lg p-4 space-y-3">
+                            <button class="text-lg bg-white px-4 py-1 rounded-md">CloudSync</button>
+                            <p class="text-2xl font-medium">Add Dark Mode</p>
+                            <div class="bg-white flex items-center">
+                                <p class="text-lg overflow-ellipsis whitespace-nowrap overflow-hidden h-20 py-3 px-3">Store the user's preference in <br> localStorage, update CSS variables dynamically, and apply a smooth transition effect.</p>
+                            </div>
+                            <hr style="border: 1px dashed oklch(0.928 0.006 264.531);" class="my-3" />
+                            <div class="flex flex-row justify-between">
+                                <div>
+                                    <p class="text-sm text-[#00303C]">Deadline</p>
+                                    <p class="text-base font-medium">21 March 2025</p>
+                                </div>
+                                <div>
+                                    <button class="text-white text-base font-medium px-5 py-2 rounded-md bg-btn-primary">Completed</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border bg-board-primary rounded-lg p-4 space-y-3">
+                            <button class="text-lg bg-white px-4 py-1 rounded-md">SwiftPay</button>
+                            <p class="text-2xl font-medium">Optimize  Home page </p>
+                            <div class="bg-white flex items-center">
+                                <p class="text-lg overflow-ellipsis whitespace-nowrap overflow-hidden h-20 py-3 px-3">Debug using Chrome <br> DevTools, check for overlapping elements, and ensure onClick works properly and ensure onClick works properly</p>
+                            </div>
+                            <hr style="border: 1px dashed oklch(0.928 0.006 264.531);" class="my-3" />
+                            <div class="flex flex-row justify-between">
+                                <div>
+                                    <p class="text-sm text-[#00303C]">Deadline</p>
+                                    <p class="text-base font-medium">21 March 2025</p>
+                                </div>
+                                <div>
+                                    <button class="text-white text-base font-medium px-5 py-2 rounded-md bg-btn-primary">Completed</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border bg-board-primary rounded-lg p-4 space-y-3">
+                            <button class="text-lg bg-white px-4 py-1 rounded-md">Meta</button>
+                            <p class="text-2xl font-medium">Add new emoji 🤲 </p>
+                            <div class="bg-white flex items-center">
+                                <p class="text-lg overflow-ellipsis whitespace-nowrap overflow-hidden h-20 py-3 px-3">Debug using Chrome <br> DevTools, check for overlapping elements, and ensure onClick works properly and ensure onClick works properly</p>
+                            </div>
+                            <hr style="border: 1px dashed oklch(0.928 0.006 264.531);" class="my-3" />
+                            <div class="flex flex-row justify-between">
+                                <div>
+                                    <p class="text-sm text-[#00303C]">Deadline</p>
+                                    <p class="text-base font-medium">21 March 2025</p>
+                                </div>
+                                <div>
+                                    <button class="text-white text-base font-medium px-5 py-2 rounded-md bg-btn-primary">Completed</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border bg-board-primary rounded-lg p-4 space-y-3">
+                            <button class="text-lg bg-white px-4 py-1 rounded-md">Google LLC</button>
+                            <p class="text-2xl font-medium">Integrate OpenAI API </p>
+                            <div class="bg-white flex items-center">
+                                <p class="text-lg overflow-ellipsis whitespace-nowrap overflow-hidden h-20 py-3 px-3">Debug using Chrome <br> DevTools, check for overlapping elements, and ensure onClick works properly and ensure onClick works properly</p>
+                            </div>
+                            <hr style="border: 1px dashed oklch(0.928 0.006 264.531);" class="my-3" />
+                            <div class="flex flex-row justify-between">
+                                <div>
+                                    <p class="text-sm text-[#00303C]">Deadline</p>
+                                    <p class="text-base font-medium">21 March 2025</p>
+                                </div>
+                                <div>
+                                    <button class="text-white text-base font-medium px-5 py-2 rounded-md bg-btn-primary">Completed</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="border bg-board-primary rounded-lg p-4 space-y-3">
+                            <button class="text-lg bg-white px-4 py-1 rounded-md">Glassdoar</button>
+                            <p class="text-2xl font-medium">Improve Job searching </p>
+                            <div class="bg-white flex items-center">
+                                <p class="text-lg overflow-ellipsis whitespace-nowrap overflow-hidden h-20 py-3 px-3">Debug using Chrome <br> DevTools, check for overlapping elements, and ensure onClick works properly and ensure onClick works properly</p>
+                            </div>
+                            <hr style="border: 1px dashed oklch(0.928 0.006 264.531);" class="my-3" />
+                            <div class="flex flex-row justify-between">
+                                <div>
+                                    <p class="text-sm text-[#00303C]">Deadline</p>
+                                    <p class="text-base font-medium">21 March 2025</p>
+                                </div>
+                                <div>
+                                    <button class="text-white text-base font-medium px-5 py-2 rounded-md bg-btn-primary">Completed</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-span-2 bg-white space-y-2 rounded-lg">
+                <div class="flex flex-row justify-center items-center gap-2 mt-4 ">
+                    <img src="assets/activity.png" alt="">
+                    <p class="text-lg font-medium">Activity Log</p>
+                </div>
+                <div class="text-center">
+                    <button class="text-white text-base font-medium px-5 py-2 rounded-md bg-btn-primary">Clear History</button>
+                </div>
+                <hr style="border: 1px dashed oklch(0.928 0.006 264.531);" class="my-3"/>
+            </div>
+        </div>
+
+    </section>
+
+   
+    
+    
+    
+</body>
+</html>
