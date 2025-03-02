@@ -24,12 +24,6 @@ for(let completedBtn of completedBtns){
         else{
             alert("Board Updated Successfully");
         }
-        
-        // console.log(completedBtn);
-        // console.log(event.target)
-        // console.log(event.target.id)
-        // console.log(completedBtn.id)
-        // console.log(event.target.id);
         const checkBoxButton2Value = parseInt(checkboxButon2.innerText) - 1;
         checkboxButon2.innerText = checkBoxButton2Value;
         const checkBoxButton1Value = parseInt(checkboxButon1.innerText) + 1;
@@ -75,25 +69,19 @@ document.getElementById('theme-btn')
         }
         const colorHexValue = rgbToHex(r, g, b);
         console.log(colorHexValue)
-        let color=[colorHexValue]
-        body.classList.replace("#f4f7ff",colorHexValue)
-        console.log(body.classList.add("bg-[",colorHexValue,"]"));
-
-
-        // const colorArray =['red',"green","yellow"]
-        // const body = document.getElementById('body-tag');
-        // for(let color of colorArray){
-        //     body.style.backgroundColor= color;
-        // }
+        let color=colorHexValue;
+        let bgcolorarray = body.className.split("-");
+        console.log(bgcolorarray)
+        let bgcolor = body.className.split("-")[1];
+        console.log(bgcolor)
+        bgcolor=[colorHexValue];
+        console.log(bgcolor)
+        body.classList.add("bg-",bgcolor)
+        console.log(body)
+        // body.classList.add("bg-[",colorHexValue,"]");
+        // console.log(body.classList.add("bg-[",colorHexValue,"]"))
         
 })
 
-
-// Example usage:
-// console.log(rgbToHex(255, 99, 71));  // Output: "#ff6347" (Tomato color)
-// console.log(randomvalue1,randomvalue2,randomvalue3)
-// // const colorName = rgb(randomvalue1,randomvalue2,randomvalue3)
-// body.classList.add("bg-rgb(randomvalue1,randomvalue2,randomvalue3)")
-// console.log(body.className)
 
 
