@@ -1,7 +1,7 @@
   // discover button e click korle blog page e jabe
 document.getElementById('discover-btn')
     .addEventListener('click',function(){
-        window.location.href = "Blog.html";
+        window.location.href = "blog.html";
 })
 
 //
